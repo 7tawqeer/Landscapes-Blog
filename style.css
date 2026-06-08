@@ -1,20 +1,22 @@
 /* box-sizing to prevent padding from expanding the width on mobile */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
 body {
     margin: auto;
-    max-width: 800px;    /* Centers the content */
+    max-width: 800px;
     padding: 20px;
-    background-color: rgb(226, 239, 243);
+    background-color: #FDFBF7;
     font-family: 'Times New Roman', Times, serif;
-    color: #333;
     line-height: 1.6;
+    color:#3E3A39;
 }
 
 header {
-    background-image: url('images/mount fuji.jpg');
+    background-image: url('images/china-anhui-huangshan.jpg');
     background-size: cover;
     background-position: center;
     background-color: rgba(0, 0, 0, 0.4);
@@ -29,6 +31,7 @@ header h1 {
     color: #ffffff;
     margin: 0;
     font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* makes text stand out against the background image */
 }
 
 header p {
@@ -38,17 +41,28 @@ header p {
     margin-top: 10px;
 }
 
+.image-notice {
+    background-color: #F4EBE1;
+    border-left: 5px solid #A0522D;
+    padding: 15px 20px;
+    margin: 30px 0;
+    font-style: italic;
+    color: #333;
+    text-align: center;
+    border-radius: 4px;
+}
+
 .main {
-    color: #2b4c3b;
+    color: #4A5D23;
     text-align: left;
     font-family: Cambria, Georgia, serif;
-    border-bottom: 2px solid #665757;
+    border-bottom: 2px solid #EADCD3;
     padding-bottom: 5px;
     margin-top: 40px;
 }
 
 .sub {
-    color: rgb(42, 42, 84);
+    color: #A0522D;
     font-family: 'Times New Roman', Times, serif;
     font-size: 1.4rem;
     margin-bottom: 10px;
@@ -60,8 +74,9 @@ header p {
 }
 
 img {
-    max-width: 100%;       /* Ensures image never exceeds its container */
-    height: auto;
+    max-width: 100%;        /* Ensures image never exceeds its container */
+    aspect-ratio: 16 / 9;  /* Creates a uniform landscape shape for every image */
+    object-fit: cover;    /* Prevents stretching by cropping to fit the shape */
     border-radius: 8px;
     display: block;
     margin: 20px auto;
@@ -70,7 +85,7 @@ img {
 hr {
     border: 0;
     height: 1px;
-    background-color: rgb(226, 239, 243);
+    background-color: #EADCD3;
     margin: 40px;
 }
 
@@ -79,13 +94,18 @@ hr {
     margin-top: 50px;
     padding-top: 20px;
     font-size: 0.9rem;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid #EADCD3;
 }
 
 .signature span {
     font-family: 'Brush Script MT', 'Lucida Handwriting', cursive;
     font-size: 2rem;
-    color: #2b4c3b;
+    color: #4A5D23;
+    transition: color 0.3s ease-in-out;     /*smooth hover effect*/
+}
+
+.signature span:hover{
+    color: #597226;
 }
 
 footer {
@@ -96,10 +116,11 @@ footer a {
     color: #2b4c3b;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s ease;    /*smooth hover effect*/
 }
 
 footer a:hover {
-    color: rgb(131, 66, 66);
+    color: #A0522D;
 }
 
 /* Mobile Responsiveness */
@@ -107,9 +128,9 @@ footer a:hover {
     body {
         padding: 15px;
     }
-    
+
     header {
-        padding: 40px 15px; 
+        padding: 40px 15px;
     }
 
     header h1 {

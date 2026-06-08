@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://tawqeerzahoor.netlify.app//sitemap.xml
+Sitemap: https://landscapes-blog.netlify.app/sitemap.xml
