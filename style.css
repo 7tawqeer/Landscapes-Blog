@@ -97,14 +97,15 @@ hr {
     border-top: 1px solid #EADCD3;
 }
 
-.signature span {
+.signature a {
     font-family: 'Brush Script MT', 'Lucida Handwriting', cursive;
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: #4A5D23;
+    text-decoration: none;
     transition: color 0.3s ease-in-out;     /*smooth hover effect*/
 }
 
-.signature span:hover{
+.signature a:hover{
     color: #597226;
 }
 
